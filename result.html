@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPO Result</title>
+</head>
+<body>
+    {% if error %}
+        <h2>{{ error }}</h2>
+    {% else %}
+        <h1>{{ company }} IPO Info</h1>
+        <p><b>Price:</b> {{ info.price }}</p>
+        <p><b>Dates:</b> {{ info.issue_dates }}</p>
+        <p><b>Lot Size:</b> {{ info.lot_size }}</p>
+        <p><b>Status:</b> {{ info.status }}</p>
+        <p><b>Listing Date:</b> {{ info.listing_date }}</p>
+        <p><b>Lots Applied:</b> {{ lots }}</p>
+        <p><b>Allotment Chance:</b> {{ chance }}%</p>
+        <br>
+        <b>Check Allotment Status:</b><br>
+        <a href="https://ris.kfintech.com/ipostatus/" target="_blank">KFintech</a><br>
+        <a href="https://www.linkintime.co.in/IPO/public-issues.html" target="_blank">LinkIntime</a>
+    {% endif %}
+</body>
+</html>
